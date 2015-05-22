@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="ba9a013e-8495-42ad-90a5-3648a461027c" Version="1.0.0.0" Publisher="CN=Laurent" />
+  <Properties>
+    <DisplayName>GithubFinder</DisplayName>
+    <PublisherDisplayName>Laurent</PublisherDisplayName>
+    <Logo>images\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <m2:VisualElements DisplayName="GithubFinder" Description="GithubFinder" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\Square150x150Logo.png" Square30x30Logo="images\Square30x30Logo.png" ToastCapable="true">
+        <m2:SplashScreen Image="images\SplashScreen.png" BackgroundColor="#FFFFFF" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

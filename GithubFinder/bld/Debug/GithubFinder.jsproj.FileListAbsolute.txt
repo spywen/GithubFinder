@@ -1,0 +1,15 @@
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\ReverseMap\resources.pri
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\AppxManifest.xml
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\GithubFinder.build.appxrecipe
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\priconfig.xml
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\priconfig.xml.intermediate
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\layout.resfiles
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\layout.resfiles.intermediate
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\resources.resfiles
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\resources.resfiles.intermediate
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\pri.resfiles
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\pri.resfiles.intermediate
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\qualifiers.txt
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\ProjectArchitectures.txt

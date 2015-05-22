@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>GithubFinder</title>
+
+    <!-- Références WinJS -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- Références GithubFinder -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+</head>
+<body>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+
+    <!--AppBar-->
+    <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdInfo',label:'App info',icon:'pin',tooltip:'App info',section:'primary',onclick:AppBar.appBarCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdHelp',label:'Help',icon:'help',tooltip:'Help',section:'primary',onclick:AppBar.appBarCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdExit',label:'Exit',icon:'closepane',tooltip:'Exit',section:'primary',onclick:AppBar.appBarCommand}"></button>
+    </div>
+
+    <!--Exit flyout confirmation-->
+    <div id="exitFlyout" data-win-control="WinJS.UI.Flyout">
+        <div>Are you sure ?</div>
+        <button id="confirmBtn">Exit</button>
+        <button id="cancelBtn">Cancel</button>
+    </div>
+
+    <!--Help content dialog-->
+    <div data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: 'Main instruction',
+             primaryCommandText: 'Ok'
+        }">
+        Use the content area to present additional information helpful to understanding or using the dialog.
+        You can use this area to provide more detail or define terminology. Don't repeat the main instruction
+        with slightly different wording.
+    </div>
+
+    <!--Info content dialog-->
+    <div data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: 'Main instruction',
+             primaryCommandText: 'Ok'
+        }">
+        Use the content area to present additional information helpful to understanding or using the dialog.
+        You can use this area to provide more detail or define terminology. Don't repeat the main instruction
+        with slightly different wording.
+    </div>
+
+</body>
+</html>

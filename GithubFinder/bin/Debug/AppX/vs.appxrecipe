@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN-A2C4P55KMEU</Machine>
+    <WindowsUser>Laurent</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>ba9a013e-8495-42ad-90a5-3648a461027c</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>61D8E023F6C0F622BC57CBEFAE7A3A10244FABD92180BD9DFF6387CC29904AF7</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>ba9a013e-8495-42ad-90a5-3648a461027c_1.0.0.0_neutral__8785rajwqkham</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>ba9a013e-8495-42ad-90a5-3648a461027c_8785rajwqkham!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>ba9a013e-8495-42ad-90a5-3648a461027c</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Laurent</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-22T08:12:13.733</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2015-05-20T12:20:46.528</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.css">
+      <PackagePath>pages\details\details.css</PackagePath>
+      <Modified>2015-05-21T19:39:53.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.css">
+      <PackagePath>pages\home\home.css</PackagePath>
+      <Modified>2015-05-21T21:01:36.415</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\background.png">
+      <PackagePath>images\background.png</PackagePath>
+      <Modified>2015-05-20T13:39:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\found.png">
+      <PackagePath>images\found.png</PackagePath>
+      <Modified>2015-05-22T08:18:11.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\splashscreen.scale-100.png">
+      <PackagePath>images\splashscreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T13:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\splashscreen.scale-140.png">
+      <PackagePath>images\splashscreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T13:07:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\splashscreen.scale-180.png">
+      <PackagePath>images\splashscreen.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T13:08:29.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T12:57:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\Square150x150Logo.scale-140.png">
+      <PackagePath>images\Square150x150Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T12:56:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\Square150x150Logo.scale-180.png">
+      <PackagePath>images\Square150x150Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T12:56:21.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\Square150x150Logo.scale-80.png">
+      <PackagePath>images\Square150x150Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T12:57:35.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T13:10:51.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\storelogo.scale-100.png">
+      <PackagePath>images\storelogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-20T13:10:33.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2015-05-22T07:54:56.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\GithubApiService.js">
+      <PackagePath>js\GithubApiService.js</PackagePath>
+      <Modified>2015-05-22T08:05:05.782</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+      <Modified>2015-05-20T12:20:46.832</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.js">
+      <PackagePath>pages\details\details.js</PackagePath>
+      <Modified>2015-05-21T19:42:11.275</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.js">
+      <PackagePath>pages\home\home.js</PackagePath>
+      <Modified>2015-05-22T08:18:38.155</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.html">
+      <PackagePath>pages\details\details.html</PackagePath>
+      <Modified>2015-05-21T19:43:30.444</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.html">
+      <PackagePath>pages\home\home.html</PackagePath>
+      <Modified>2015-05-22T08:11:58.293</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2015-05-22T07:46:16.916</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-05-22T08:12:13.614</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.16408</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.16408</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

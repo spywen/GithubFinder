@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>details</title>
+
+    <link href="details.css" rel="stylesheet" />
+    <script src="/js/GithubApiService.js"></script>
+    <script src="details.js"></script>
+</head>
+<body>
+    <div class="details fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle"></span>
+            </h1>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <div class="reposection" aria-atomic="true" aria-label="Item detail column" aria-live="assertive">
+                <article>
+                    <header class="header">
+                        <div class="text">
+                            <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.name"></h2>
+                            <h4 class="article-subtitle" data-win-bind="textContent: repo.full_name"></h4>
+                        </div>
+                        <img class="article-image" src="#" data-win-bind="src: repo.owner.avatar_url; alt: repo.owner._login" />
+                    </header>
+                    <div class="article-content" data-win-bind="innerHTML: repo.description"></div>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
