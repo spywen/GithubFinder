@@ -30,7 +30,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.css">
       <PackagePath>pages\details\details.css</PackagePath>
-      <Modified>2015-05-21T19:39:53.699</Modified>
+      <Modified>2015-05-22T12:16:38.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
@@ -91,7 +91,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-05-22T07:54:56.215</Modified>
+      <Modified>2015-05-22T09:38:21.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\GithubApiService.js">
       <PackagePath>js\GithubApiService.js</PackagePath>
@@ -103,23 +103,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.js">
       <PackagePath>pages\details\details.js</PackagePath>
-      <Modified>2015-05-21T19:42:11.275</Modified>
+      <Modified>2015-05-22T12:11:46.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2015-05-22T08:18:38.155</Modified>
+      <Modified>2015-05-22T10:45:17.859</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.html">
       <PackagePath>pages\details\details.html</PackagePath>
-      <Modified>2015-05-21T19:43:30.444</Modified>
+      <Modified>2015-05-22T12:18:33.397</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2015-05-22T08:11:58.293</Modified>
+      <Modified>2015-05-22T10:46:52.500</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-05-22T07:46:16.916</Modified>
+      <Modified>2015-05-22T09:35:33.887</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>

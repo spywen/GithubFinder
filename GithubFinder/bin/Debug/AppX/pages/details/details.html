@@ -10,6 +10,21 @@
     <script src="details.js"></script>
 </head>
 <body>
+
+    <!-- Fragment Template -->
+    <div class="fragmenttemplate" data-win-control="WinJS.Binding.Template">
+        <div class="fragmentItem">
+            <div class="header">
+                <span class="win-type-small">Property which contains keyword(s):</span> <span class="property" data-win-bind="textContent: property"></span>
+            </div>
+            <div class="content">
+                <span class="win-type-small">Extract:</span> 
+                <pre class="item-subtitle" data-win-bind="textContent: fragment"></pre>
+            </div>
+        </div>
+    </div>
+
+
     <div class="details fragment">
         <header class="page-header" aria-label="Header content" role="banner">
             <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
@@ -17,17 +32,56 @@
                 <span class="pagetitle"></span>
             </h1>
         </header>
-        <section class="page-section" aria-label="Main content" role="main">
-            <div class="reposection" aria-atomic="true" aria-label="Item detail column" aria-live="assertive">
+        <section class="page-section grid" aria-label="Main content" role="main">
+            
+            <!--Owner-->
+            <div class="owner section" aria-atomic="true" aria-label="Owner details" aria-live="assertive">
                 <article>
                     <header class="header">
-                        <div class="text">
-                            <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.name"></h2>
-                            <h4 class="article-subtitle" data-win-bind="textContent: repo.full_name"></h4>
-                        </div>
-                        <img class="article-image" src="#" data-win-bind="src: repo.owner.avatar_url; alt: repo.owner._login" />
+                        Owner
                     </header>
-                    <div class="article-content" data-win-bind="innerHTML: repo.description"></div>
+                    <div class="article-content">
+                        <img class="article-image" src="#" data-win-bind="src: repo.owner.avatar_url; alt: repo.owner._login" />
+                        <div class="text">
+                            <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.owner.login"></h2>
+                        </div>
+                        <a class="findOnGithub" data-win-bind="href: repo.owner.html_url">Find on Github &#xe128</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Repo info-->
+            <div class="repo section" aria-atomic="true" aria-label="Repository details" aria-live="assertive">
+                <article>
+                    <header class="header">
+                        Repository
+                    </header>
+                    <div class="article-content">
+                        <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.name"></h2>
+                        <h4 class="article-subtitle" data-win-bind="textContent: repo.full_name"></h4>
+                        <p data-win-bind="innerText: repo.description"></p>
+                        <a class="findOnGithub" data-win-bind="href: repo.html_url">Find on Github &#xe128</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Search result-->
+            <div class="search section" aria-atomic="true" aria-label="Search details" aria-live="assertive">
+                <article>
+                    <header class="header">
+                        Search results
+                    </header>
+                    <div class="article-content">
+                        <div class="fragmentList win-selectionstylefilled" id="fragmentsListView" aria-label="List of fragments found" data-win-control="WinJS.UI.ListView" data-win-options="{
+                                selectionMode: 'none',
+                                tapBehavior: 'none',
+                                swipeBehavior:'none',
+                                itemDataSource: DetailsNS.fragments.dataSource,
+                                itemTemplate: select('.fragmenttemplate'),
+                                layout: {type: WinJS.UI.ListLayout}
+                            }">
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>

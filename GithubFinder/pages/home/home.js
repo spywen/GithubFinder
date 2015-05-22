@@ -6,7 +6,7 @@
     WinJS.Namespace.define("HomeNS", {
         items: new WinJS.Binding.List([]),
         toastNumberOfResult: toastNumberOfResult
-        });
+    });
 
     function toastNumberOfResult(count){
         var template = Windows.UI.Notifications.ToastTemplateType.toastImageAndText02;

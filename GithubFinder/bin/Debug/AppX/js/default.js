@@ -15,11 +15,18 @@
             if (command.winControl) {
                 var label = command.winControl.label;
                 if (label === "Exit") {
-                    app.stop();
-                    window.close();
+                    var msg = Windows.UI.Popups.MessageDialog("Are you sure ?");
+                    msg.commands.append(new Windows.UI.Popups.UICommand("Exit", AppBar.exit));
+                    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel", AppBar.cancel));
+                    msg.showAsync();
                 }
             }
-        })
+        }),
+        exit: function () {
+            app.stop();
+            window.close();
+        },
+        cancel: function () {}
     });
 
     app.addEventListener("activated", function (args) {
@@ -38,6 +45,11 @@
             // Optimisez la charge de l'application et lorsque l'écran de démarrage s'affiche, exécutez le travail planifié de haute priorité.
             ui.disableAnimations();
             var p = ui.processAll().then(function () {
+                var appInfoDialog = document.querySelector("#test").winControl;
+                var appInfoBtn = document.querySelector('#appInfoBtn');
+                appInfoBtn.addEventListener('click', function () {
+                    appInfoDialog.show();
+                });
                 return nav.navigate(nav.location || Application.navigator.home, nav.state);
             }).then(function () {
                 return sched.requestDrain(sched.Priority.aboveNormal + 1);
@@ -45,11 +57,16 @@
                 ui.enableAnimations();
             });
 
+            //Display app bar by default when app start
             document.getElementById("appBar").winControl.show();
 
             args.setPromise(p);
         }
     });
+
+    app.onready = function (arg) {
+
+    };
 
     app.oncheckpoint = function (args) {
         // TODO: cette application est sur le point d'être suspendue. Enregistrez tout état

@@ -1,88 +1,114 @@
-﻿.details section {
-	margin: auto 120px;
+﻿.details {
+	width:100%;
 }
 
-
-    .splitpage {
-    -ms-grid-columns: 106px 314px 1fr;
+.details section.grid{
     display: -ms-grid;
-    height: 100%;
-    width: 100%;
+    margin: auto 120px;
+    width:100%;
+    -ms-grid-columns:25% 60%;
+}
+.details .section{
+    margin:15px;
+    padding:0px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
 
-    .splitpage header[role=banner] {
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
+.details section .header{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:7px;
+    color: #999;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-weight:bold;
+    height:30px;
+    vertical-align:middle;
+}
+
+.details section .article-content{
+    padding:20px;
+    word-wrap: break-word;
+}
+
+.details section .owner{
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+}
+
+.details section .owner img{
+    width:100%;
+}
+
+.details section .repo{
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+}
+
+.details section .search{
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    width:100%;
+}
+
+.details .article-content{
+    color: #333;
+}
+
+.fragmentItem{
+    padding:0px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.fragmentItem .header{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:7px;
+    color: #999;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height:30px;
+    vertical-align:middle;
+}
+    .fragmentItem .header .property {
+        font-weight:bold;
     }
+.fragmentItem .content{
+    margin:15px;
+}
+.fragmentItem .content pre{
+    padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
 
-        .splitpage header[role=banner] .pagetitle {
-            overflow: hidden;
-            width: calc(100% - 20px);
-        }
-
-    .splitpage .articlesection {
-        -ms-grid-column: 3;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        margin-top: 60px;
-        overflow-y: auto;
-        padding-left: 60px;
-        padding-right: 66px;
-        position: relative;
-        z-index: 0;
-    }
-
-        .splitpage .articlesection:-ms-lang(ar, dv, fa, he, ku-Arab, pa-Arab, prs, ps, sd-Arab, syr, ug, ur, qps-plocm) {
-            padding-left: 66px;
-            padding-right: 60px;
-        }
-
-        .splitpage .articlesection header {
-            -ms-grid-columns: 180px 20px 1fr;
-            -ms-grid-rows: 180px;
-            display: -ms-grid;
-            margin-bottom: 20px;
-        }
-
-            .splitpage .articlesection header .text {
-                -ms-grid-column: 3;
-            }
-
-                .splitpage .articlesection header .text .article-subtitle {
-                    margin-top: 4px;
-                }
-
-            .splitpage .articlesection header .article-image {
-                height: 180px;
-                width: 180px;
-            }
-
-        .splitpage .articlesection .article-content {
-            overflow-y: auto;
-        }
-
-            .splitpage .articlesection .article-content p {
-                margin-bottom: 16pt;
-                margin-top: 0;
-            }
-
-@media (max-width: 767px) {
-    .splitpage.groupdetail {
-        -ms-grid-columns: 106px 1fr;
-    }
-
-        .splitpage.groupdetail .articlesection {
-            display: none;
-        }
-
-    .splitpage.itemdetail {
-        -ms-grid-columns: 60px 1fr;
-    }
-
-        .splitpage.itemdetail .articlesection {
-            -ms-grid-column: 2;
-            -ms-grid-row: 2;
-            -ms-grid-row-span: 1;
-            margin-top: 12px;
-        }
+/*Ovverides*/
+.win-itembox{
+    background-color:#fff !important;
+}
+button.black{
+    background-color: transparent;
+    border-color: #333;
+    color: #333;
+}
+button.black{
+    background-color: transparent;
+    border-color: #333;
+    color: #333;
+}
+button.black:hover{
+    background-color: #f7f7f7;
 }
