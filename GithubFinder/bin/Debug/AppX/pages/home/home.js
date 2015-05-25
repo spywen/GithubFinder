@@ -7,9 +7,9 @@
     Home namespace
     **/
     WinJS.Namespace.define("HomeNS", {
-        //Repository found
-        items: new WinJS.Binding.List([]),
-        toastNumberOfResult: toastNumberOfResult,
+        //Repositories found list
+        repositories: new WinJS.Binding.List([]),
+        //Method called when search
         querySubmittedHandler: WinJS.UI.eventHandler(querySubmittedHandler)
     });
 
@@ -23,12 +23,12 @@
         startOrStopLoader(true);
         var result = GithubApiService.search(args.detail.queryText).then(function (result) {
             //Toast number of results found
-            HomeNS.toastNumberOfResult(result.count);
+            toastNumberOfResult(result.count);
             //Get and set results found
-            HomeNS.items = result.items;
+            HomeNS.repositories = result.items;
             //Filled list view with results
-            var listView = document.getElementById("itemsListView").winControl;
-            listView.itemDataSource = HomeNS.items.dataSource;
+            var listView = document.getElementById("repositoriesListView").winControl;
+            listView.itemDataSource = HomeNS.repositories.dataSource;
             //Stop loader
             startOrStopLoader(false);
         });
@@ -38,7 +38,7 @@
     Reset list view
     **/
     function resetListView() {
-        var listView = document.getElementById("itemsListView").winControl;
+        var listView = document.getElementById("repositoriesListView").winControl;
         listView.itemDataSource = undefined;
     }
 
@@ -99,7 +99,7 @@
         Invoke particular item to see details
         **/
         _itemInvoked: function (args) {
-            var repoId = HomeNS.items.getAt(args.detail.itemIndex).id;
+            var repoId = HomeNS.repositories.getAt(args.detail.itemIndex).id;
             WinJS.Navigation.navigate("/pages/details/details.html", { repoId: repoId });
         },
     });

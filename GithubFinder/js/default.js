@@ -9,7 +9,11 @@
     var sched = WinJS.Utilities.Scheduler;
     var ui = WinJS.UI;
 
+    /**
+    App bar namespace
+    **/
     WinJS.Namespace.define("AppBar", {
+        //Appbar buttons actions
         appBarCommand: WinJS.UI.eventHandler(function (ev) {
             var command = ev.currentTarget;
             if (command.winControl) {
@@ -17,7 +21,7 @@
                 if (label === "Exit") {
                     var msg = Windows.UI.Popups.MessageDialog("Are you sure ?");
                     msg.commands.append(new Windows.UI.Popups.UICommand("Exit", AppBar.exit));
-                    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel", AppBar.closeFlyOutWithoutAction));
+                    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel", function(){}));
                     msg.showAsync();
                 } else if(label === 'Help') {
                     document.getElementById("helpFlyout").winControl.show(command);
@@ -26,11 +30,11 @@
                 }
             }
         }),
+        //Exit app
         exit: function () {
             app.stop();
             window.close();
         },
-        closeFlyOutWithoutAction: function () { },
     });
 
     app.addEventListener("activated", function (args) {

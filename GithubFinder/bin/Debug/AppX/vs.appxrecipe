@@ -95,7 +95,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-05-25T15:29:06.439</Modified>
+      <Modified>2015-05-25T15:54:25.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\GithubApiService.js">
       <PackagePath>js\GithubApiService.js</PackagePath>
@@ -111,7 +111,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2015-05-25T15:29:38.224</Modified>
+      <Modified>2015-05-25T15:52:13.011</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.html">
       <PackagePath>pages\details\details.html</PackagePath>
@@ -119,7 +119,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2015-05-25T14:44:19.464</Modified>
+      <Modified>2015-05-25T15:50:59.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\default.html">
       <PackagePath>default.html</PackagePath>

@@ -3,6 +3,9 @@
 (function () {
     "use strict";
 
+    /**
+    Details namespace
+    **/
     WinJS.Namespace.define("DetailsNS", {
         repoSelected: undefined,
         ownerDetails: undefined,
@@ -32,6 +35,7 @@
         **/
         loadDetails: function(){
             return new WinJS.Promise(function (complete, error) {
+                //get owner details
                 GithubApiService.findUser(DetailsNS.repoSelected.owner.login).then(function (owner) {
                     DetailsNS.ownerDetails = owner;
                 }).then(function () {
@@ -48,14 +52,17 @@
         Ready method
         **/
         ready: function (element, options) {
+            //Set page title
             element.querySelector("header[role=banner] .pagetitle").textContent = DetailsNS.repoSelected.name;
 
+            //Binding attributes
             this._data = WinJS.Binding.as({
                 repo: DetailsNS.repoSelected,
                 ownerDetails: DetailsNS.ownerDetails,
                 repoDetails: DetailsNS.repoDetails
             });
             
+            //Get fragments
             DetailsNS.fragments = new WinJS.Binding.List([]);
             for (var i = 0, len = DetailsNS.repoSelected.text_matches.length; i < len; i++) {
                 DetailsNS.fragments.push(DetailsNS.repoSelected.text_matches[i]);
