@@ -7,10 +7,15 @@
     Details namespace
     **/
     WinJS.Namespace.define("DetailsNS", {
+        //repo default data
         repoSelected: undefined,
+        //owner details
         ownerDetails: undefined,
+        //repo details
         repoDetails: undefined,
+        //fragments of the search
         fragments: new WinJS.Binding.List([]),
+        //Date converter (github api send date formatted with T and Z, we just remove it)
         convertDate: WinJS.Binding.converter(function (date) {
             date = date.replace("T", " ");
             date = date.replace("Z", "");
