@@ -1,17 +1,23 @@
 ﻿(function () {
     "use strict";
 
-    var list = new WinJS.Binding.List();
-
+    /**
+    Github API service namespace
+    **/
     WinJS.Namespace.define("GithubApiService", {
-        items: list,
+        items: new WinJS.Binding.List(),
         search: search,
-        getRepoById: getRepoById
+        getRepoById: getRepoById,
+        findRepository: findRepository,
+        findUser: findUser
     });
 
+    /**
+    Search repository
+    **/
     function search(keywords) {
         this.items = new WinJS.Binding.List();
-        return new WinJS.Promise(function (complete) {
+        return new WinJS.Promise(function (complete, error) {
             WinJS.xhr({
                 url: 'https://api.github.com/search/repositories?q=' + keywords + '&page=1&per_page=200',
                 type: 'GET',
@@ -29,18 +35,19 @@
                             items: GithubApiService.items
                         });
                     } else {
-                        //output("Error obtaining feed. XHR status code: " + status);
-                        console.log('error');
+                        error("Githup api not available");
                     }
                 },
                 function (result) {
-                    //callback(null, result.status);
-                    console.log('error');
+                    error("An unexpected error occured. Please Try again, if the problem persists contact the administrator.");
                 }
             );
         });
     }
 
+    /**
+    Find repo by id
+    **/
     function getRepoById(id) {
         for (var i = 0; i < GithubApiService.items.length; i++) {
             var item = GithubApiService.items.getAt(i);
@@ -48,6 +55,54 @@
                 return item;
             }
         }
+    }
+
+    /**
+    Find additionnal repository data
+    **/
+    function findRepository(id) {
+        return new WinJS.Promise(function (complete, error) {
+            WinJS.xhr({
+                url: 'https://api.github.com/repositories/' + id,
+                type: 'GET'
+            }).done(
+                function (result) {
+                    if (result.status === 200) {
+                        var user = JSON.parse(result.responseText);
+                        complete(user);
+                    } else {
+                        error("Githup api not available");
+                    }
+                },
+                function (result) {
+                    error("An unexpected error occured. Please Try again, if the problem persists contact the administrator.");
+                }
+            );
+        });
+    }
+
+    /**
+    Find additionnal owner data
+    **/
+    function findUser(userName) {
+        return new WinJS.Promise(function (complete, error) {
+            WinJS.xhr({
+                url: 'https://api.github.com/users/' + userName,
+                type: 'GET'
+            }).done(
+                function (result) {
+                    if (result.status === 200) {
+                        var user = JSON.parse(result.responseText);
+                        complete(user);
+                    } else {
+                        error("Githup api not available");
+                    }
+                },
+                function (result) {
+                    error("An unexpected error occured. Please Try again, if the problem persists contact the administrator.");
+                }
+            );
+        });
     }
 
 })();

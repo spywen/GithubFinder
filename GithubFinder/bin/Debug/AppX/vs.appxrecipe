@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>ba9a013e-8495-42ad-90a5-3648a461027c</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bld\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>61D8E023F6C0F622BC57CBEFAE7A3A10244FABD92180BD9DFF6387CC29904AF7</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>68C4AA93C1AD38D87A8005B93669D191EF2C0527EE9467BC48E551435B68BABA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ba9a013e-8495-42ad-90a5-3648a461027c_1.0.0.0_neutral__8785rajwqkham</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ba9a013e-8495-42ad-90a5-3648a461027c_8785rajwqkham!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ba9a013e-8495-42ad-90a5-3648a461027c</RegisteredPackageID>
@@ -20,21 +20,25 @@
     <AppXManifest Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-05-22T08:12:13.733</Modified>
+      <Modified>2015-05-25T14:32:18.274</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2015-05-20T12:20:46.528</Modified>
+      <Modified>2015-05-22T19:03:14.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css">
+      <PackagePath>css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css</PackagePath>
+      <Modified>2015-05-25T14:25:27.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.css">
       <PackagePath>pages\details\details.css</PackagePath>
-      <Modified>2015-05-22T12:16:38.577</Modified>
+      <Modified>2015-05-22T19:29:47.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
-      <Modified>2015-05-21T21:01:36.415</Modified>
+      <Modified>2015-05-25T14:45:17.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\images\background.png">
       <PackagePath>images\background.png</PackagePath>
@@ -91,11 +95,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-05-22T09:38:21.266</Modified>
+      <Modified>2015-05-25T15:29:06.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\GithubApiService.js">
       <PackagePath>js\GithubApiService.js</PackagePath>
-      <Modified>2015-05-22T08:05:05.782</Modified>
+      <Modified>2015-05-22T15:26:16.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
@@ -103,27 +107,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.js">
       <PackagePath>pages\details\details.js</PackagePath>
-      <Modified>2015-05-22T12:11:46.613</Modified>
+      <Modified>2015-05-22T17:37:51.078</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2015-05-22T10:45:17.859</Modified>
+      <Modified>2015-05-25T15:29:38.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.html">
       <PackagePath>pages\details\details.html</PackagePath>
-      <Modified>2015-05-22T12:18:33.397</Modified>
+      <Modified>2015-05-25T14:38:48.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2015-05-22T10:46:52.500</Modified>
+      <Modified>2015-05-25T14:44:19.464</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-05-22T09:35:33.887</Modified>
+      <Modified>2015-05-25T15:28:34.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-05-22T08:12:13.614</Modified>
+      <Modified>2015-05-25T14:32:17.874</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

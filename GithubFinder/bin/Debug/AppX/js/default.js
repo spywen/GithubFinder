@@ -17,8 +17,12 @@
                 if (label === "Exit") {
                     var msg = Windows.UI.Popups.MessageDialog("Are you sure ?");
                     msg.commands.append(new Windows.UI.Popups.UICommand("Exit", AppBar.exit));
-                    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel", AppBar.cancel));
+                    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel", AppBar.closeFlyOutWithoutAction));
                     msg.showAsync();
+                } else if(label === 'Help') {
+                    document.getElementById("helpFlyout").winControl.show(command);
+                } else if (label === 'App info') {
+                    document.getElementById("appInfoFlyout").winControl.show(command);
                 }
             }
         }),
@@ -26,30 +30,16 @@
             app.stop();
             window.close();
         },
-        cancel: function () {}
+        closeFlyOutWithoutAction: function () { },
     });
 
     app.addEventListener("activated", function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
-            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                // TODO: cette application vient d'être lancée. Initialisez
-                // votre application ici.
-            } else {
-                // TODO: cette application a été réactivée après avoir été suspendue.
-                // Restaurez l'état de l'application ici.
-            }
-
             nav.history = app.sessionState.history || {};
             nav.history.current.initialPlaceholder = true;
 
-            // Optimisez la charge de l'application et lorsque l'écran de démarrage s'affiche, exécutez le travail planifié de haute priorité.
             ui.disableAnimations();
             var p = ui.processAll().then(function () {
-                var appInfoDialog = document.querySelector("#test").winControl;
-                var appInfoBtn = document.querySelector('#appInfoBtn');
-                appInfoBtn.addEventListener('click', function () {
-                    appInfoDialog.show();
-                });
                 return nav.navigate(nav.location || Application.navigator.home, nav.state);
             }).then(function () {
                 return sched.requestDrain(sched.Priority.aboveNormal + 1);
@@ -69,10 +59,6 @@
     };
 
     app.oncheckpoint = function (args) {
-        // TODO: cette application est sur le point d'être suspendue. Enregistrez tout état
-        // devant être conservé lors des suspensions ici. Si vous devez 
-        // effectuer une opération asynchrone avant la suspension de 
-        // l'application, appelez args.setPromise().
         app.sessionState.history = nav.history;
     };
 

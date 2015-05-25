@@ -7,7 +7,9 @@
     WinJS.Namespace.define("GithubApiService", {
         items: new WinJS.Binding.List(),
         search: search,
-        getRepoById: getRepoById
+        getRepoById: getRepoById,
+        findRepository: findRepository,
+        findUser: findUser
     });
 
     /**
@@ -59,14 +61,48 @@
     Find additionnal repository data
     **/
     function findRepository(id) {
-
+        return new WinJS.Promise(function (complete, error) {
+            WinJS.xhr({
+                url: 'https://api.github.com/repositories/' + id,
+                type: 'GET'
+            }).done(
+                function (result) {
+                    if (result.status === 200) {
+                        var user = JSON.parse(result.responseText);
+                        complete(user);
+                    } else {
+                        error("Githup api not available");
+                    }
+                },
+                function (result) {
+                    error("An unexpected error occured. Please Try again, if the problem persists contact the administrator.");
+                }
+            );
+        });
     }
 
     /**
     Find additionnal owner data
     **/
-    function findUser(id) {
-
+    function findUser(userName) {
+        return new WinJS.Promise(function (complete, error) {
+            WinJS.xhr({
+                url: 'https://api.github.com/users/' + userName,
+                type: 'GET'
+            }).done(
+                function (result) {
+                    if (result.status === 200) {
+                        var user = JSON.parse(result.responseText);
+                        complete(user);
+                    } else {
+                        error("Githup api not available");
+                    }
+                },
+                function (result) {
+                    error("An unexpected error occured. Please Try again, if the problem persists contact the administrator.");
+                }
+            );
+        });
     }
 
 })();

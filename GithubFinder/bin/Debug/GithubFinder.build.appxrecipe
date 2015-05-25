@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css">
+      <PackagePath>css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Laurent\Documents\GitHub\GithubFinder\GithubFinder\pages\details\details.css">
       <PackagePath>pages\details\details.css</PackagePath>
     </AppxPackagedFile>

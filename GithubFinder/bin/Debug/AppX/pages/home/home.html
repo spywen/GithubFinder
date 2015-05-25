@@ -34,14 +34,17 @@
             <button data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
                 <span class="pagetitle">Welcome to GithubFinder !</span>
+            	<progress class="win-ring win-medium"></progress>
             </h1>
-            
+            <div class="searchBox"
+				data-win-control="WinJS.UI.SearchBox"
+				data-win-options="{placeholderText: 'Search...',
+                 focusOnKeyboardInput:true,
+                 onquerysubmitted: HomeNS.querySubmittedHandler}"
+				data-win-bind="value: searchText">
+			</div>
         </header>
         <section aria-label="Main content" role="main">
-            <form class="search">
-                <input type="text" placeholder="Search for something..." id="searchTxtBox" data-win-bind="value: searchText" onclick="this.select();" />
-                <button class="samplePageControl-button" type="Search" onclick="return false;">Find!</button>
-            </form>
             <div class="itemslist win-selectionstylefilled" id="itemsListView" aria-label="List of repository found" data-win-control="WinJS.UI.ListView" data-win-options="{
                 selectionMode: 'none',
                 currentItem: {type: WinJS.UI.ObjectType.item, index: 0, hasFocus: true},

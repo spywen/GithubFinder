@@ -20,21 +20,33 @@
 
     <!--AppBar-->
     <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
-        <button id="appInfoBtn" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdInfo',label:'App info',icon:'pin',tooltip:'App info',section:'primary'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdInfo',label:'App info',icon:'pin',tooltip:'App info',section:'primary',onclick:AppBar.appBarCommand}"></button>
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdHelp',label:'Help',icon:'help',tooltip:'Help',section:'primary',onclick:AppBar.appBarCommand}"></button>
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdExit',label:'Exit',icon:'closepane',tooltip:'Exit',section:'primary',onclick:AppBar.appBarCommand}"></button>
     </div>
 
-    <div id="test" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
-             title: 'Main instruction',
-             primaryCommandText: 'button1',
-             secondaryCommandText: 'button2'
-        }">
-        <p>
-            This application is dedicated to the amazing Github service which exists since 2008. More and more developers and common people use this web service to share their projects and consequently their knowledge.
-            Github have been designed and created to be able to simply search and find what you want on this code encyclopaedia.
-        </p>
-        <p>Designed and created by Babin Laurent for school project at Supinfo Nice 2015 (4NET)</p>
+    <div id="appInfoFlyout" data-win-control="WinJS.UI.Flyout" aria-label="{Application info}">
+        <div>
+            <p>
+                This application is dedicated to the amazing Github service which exists since 2008. More and more developers and common people use this web service to share their projects and consequently their knowledge.
+                Github Finder application have been designed and created to be able to simply search and find what you want on this code encyclopaedia from a Windows device.
+            </p>
+            <p>Thanks to the fabulous Github API ;)</p>
+            <p><strong>Designed and created by Babin Laurent for school project at Supinfo Nice 2015 (4NET)</strong></p>
+        </div>
+    </div>
+
+    <div id="helpFlyout" data-win-control="WinJS.UI.Flyout" aria-label="{Help}">
+        <div>
+            <p>
+                This application is devided in two well define parts : 
+                <ul>
+                    <li>A search page: to be able to enter keywords and get what have been found, inside a list of all the repositories clickable... </li>
+                    <li>A details page: for a particular repository, which gathering all the more important information concerning this one (Owner data, repository data, search fragments found)</li>
+                </ul>
+            </p>
+            <p>The details page contains as well many links which will redirect you on the Github web site directly.</p>
+        </div>
     </div>
 
 </body>

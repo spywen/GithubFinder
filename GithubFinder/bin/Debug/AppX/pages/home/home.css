@@ -3,6 +3,15 @@
     background-repeat: no-repeat;
     background-size:cover;
 }
+.win-ring{
+	color:white !important;
+    visibility:hidden;
+}
+.searchBox {
+    -ms-grid-column: 4;
+    margin-top: 57px;
+    margin-right: 29px;
+}
 
 .homepage section[role=main] {
     -ms-grid-row: 2;

@@ -8,6 +8,8 @@
     <link href="details.css" rel="stylesheet" />
     <script src="/js/GithubApiService.js"></script>
     <script src="details.js"></script>
+
+	<link href="../../css/Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -16,10 +18,10 @@
         <div class="fragmentItem">
             <div class="header">
                 <span class="win-type-small">Property which contains keyword(s):</span> <span class="property" data-win-bind="textContent: property"></span>
-            </div>
+			</div>
             <div class="content">
-                <span class="win-type-small">Extract:</span> 
-                <pre class="item-subtitle" data-win-bind="textContent: fragment"></pre>
+				<span class="extract">Extract:</span>
+				<pre class="item-subtitle" data-win-bind="textContent:fragment"></pre>
             </div>
         </div>
     </div>
@@ -41,12 +43,32 @@
                         Owner
                     </header>
                     <div class="article-content">
-                        <img class="article-image" src="#" data-win-bind="src: repo.owner.avatar_url; alt: repo.owner._login" />
+						<div class="imgContainer">
+							<img class="article-image" src="#" data-win-bind="src: repo.owner.avatar_url; alt: repo.owner._login" />
+						</div>
                         <div class="text">
-                            <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.owner.login"></h2>
+                            <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.owner.login">Spywen</h2>
+                            <div>
+                                <span class="win-type-interactive">Public repositorie(s): </span>
+                                <span class="win-type-large" data-win-bind="textContent: ownerDetails.public_repos"></span>
+                            </div>
+                            <div>
+                                <span class="win-type-interactive">Public gist(s): </span>
+                                <span class="win-type-large" data-win-bind="textContent: ownerDetails.public_gists"></span>
+                            </div>
+                            <div>
+                                <span class="win-type-interactive">Follower(s): </span>
+                                <span class="win-type-large" data-win-bind="textContent: ownerDetails.followers"></span>
+                            </div>
+                            <div>
+                                <span class="win-type-interactive">On github since: </span>
+                                <span class="win-type-large" data-win-bind="textContent: ownerDetails.created_at DetailsNS.convertDate"></span>
+                            </div>
                         </div>
-                        <a class="findOnGithub" data-win-bind="href: repo.owner.html_url">Find on Github &#xe128</a>
                     </div>
+                    <footer>
+                        <a class="findOnGithub" data-win-bind="href: repo.owner.html_url">Find on Github &#xe128</a>
+                    </footer>
                 </article>
             </div>
 
@@ -60,8 +82,26 @@
                         <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.name"></h2>
                         <h4 class="article-subtitle" data-win-bind="textContent: repo.full_name"></h4>
                         <p data-win-bind="innerText: repo.description"></p>
-                        <a class="findOnGithub" data-win-bind="href: repo.html_url">Find on Github &#xe128</a>
+                        <div>
+                            <span class="win-type-interactive">Watcher(s): </span>
+                            <span class="win-type-large" data-win-bind="textContent: repoDetails.watchers"></span>
+                        </div>
+                        <div>
+                            <span class="win-type-interactive">Fork(s): </span>
+                            <span class="win-type-large" data-win-bind="textContent: repoDetails.forks"></span>
+                        </div>
+                        <div>
+                            <span class="win-type-interactive">Language: </span>
+                            <span class="win-type-large" data-win-bind="textContent: repoDetails.language"></span>
+                        </div>
+                        <div>
+                            <span class="win-type-interactive">On github since: </span>
+                            <span class="win-type-large" data-win-bind="textContent: repoDetails.created_at DetailsNS.convertDate"></span>
+                        </div>
                     </div>
+                    <footer>
+                        <a class="findOnGithub" data-win-bind="href: repo.html_url">Find on Github &#xe128</a>
+                    </footer>
                 </article>
             </div>
 
