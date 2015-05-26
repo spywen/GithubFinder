@@ -3,14 +3,14 @@
 	margin-right: 50px;
 	margin-left:120px;
 	overflow-y:auto;
-	overflow-x:auto;
+	overflow-x:hidden;
 }
 
 .details section.grid{
     display: -ms-grid;
     margin-top: auto;
     margin-bottom: auto;
-    -ms-grid-columns:22% 75%;
+    -ms-grid-columns:35% 65%;
 }
 .details .section{
     margin:15px;
@@ -69,7 +69,7 @@
     -ms-grid-column: 2;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
-	width:100%;
+	width:95%;
 }
 
 .details .article-content{

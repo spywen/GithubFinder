@@ -35,8 +35,8 @@
         },
 
         /**
-        Load required details (repo and owner)
-        Set DetailsNS namespace
+            Load required details (repo and owner)
+            Set DetailsNS namespace
         **/
         loadDetails: function(){
             return new WinJS.Promise(function (complete, error) {
@@ -57,6 +57,11 @@
         Ready method
         **/
         ready: function (element, options) {
+
+            //Declare share contract listener
+            var dataTransferManager = Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView();
+            dataTransferManager.addEventListener("datarequested", shareRepository);
+
             //Set page title
             element.querySelector("header[role=banner] .pagetitle").textContent = DetailsNS.repoSelected.name;
 
@@ -76,6 +81,22 @@
             listView.itemDataSource = DetailsNS.fragments.dataSource;
 
             WinJS.Binding.processAll(element, this._data);
+        },
+
+        unload: function () {
+            //Free share contract listener
+            var dataTransferManager = Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView();
+            dataTransferManager.removeEventListener("datarequested", shareRepository);
         }
     });
+
+    /**
+        Share contract : share current repository 
+    **/
+    function shareRepository(e) {
+        var request = e.request;
+        request.data.properties.title = "GithubFinder - Share repository - " + DetailsNS.repoSelected.name;
+        request.data.properties.description = "Someone wants to share to you a Github repository found with GithubFinder.";
+        request.data.setWebLink(new Windows.Foundation.Uri(DetailsNS.repoSelected.html_url));  
+    }
 })();
