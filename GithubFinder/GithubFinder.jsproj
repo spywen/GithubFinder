@@ -49,8 +49,11 @@
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <RequiredPlatformVersion>8.1</RequiredPlatformVersion>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
-    <DefaultLanguage>fr-FR</DefaultLanguage>
-    <PackageCertificateKeyFile>GithubFinder_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <DefaultLanguage>en</DefaultLanguage>
+    <PackageCertificateKeyFile>GithubFinder_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>83EAD27F0A9FB02CFF62F7031ED0AAA2476881D3</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -58,6 +61,7 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css" />
+    <None Include="GithubFinder_StoreKey.pfx" />
     <Content Include="images\background.png" />
     <Content Include="images\found.png" />
     <Content Include="images\GF_1116x540.png" />
@@ -123,6 +127,7 @@
     <Content Include="js\default.js" />
     <Content Include="js\GithubApiService.js" />
     <Content Include="js\navigator.js" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="pages\details\details.css" />
     <Content Include="pages\details\details.html" />
     <Content Include="pages\details\details.js" />

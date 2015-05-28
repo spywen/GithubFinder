@@ -99,4 +99,8 @@
         request.data.properties.description = "Someone wants to share to you a Github repository found with GithubFinder.";
         request.data.setWebLink(new Windows.Foundation.Uri(DetailsNS.repoSelected.html_url));  
     }
+
+    function raiseError() {
+
+    }
 })();

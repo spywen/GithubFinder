@@ -55,8 +55,27 @@
             document.getElementById("appBar").winControl.show();
 
             args.setPromise(p);
+        } else if (args.detail.kind === Windows.ApplicationModel.Activation.ActivationKind.search) {
+            // Use setPromise to indicate to the system that the splash screen must not be torn down
+            // until after processAll and navigate complete asynchronously.
+            args.setPromise(WinJS.UI.processAll().then(function () {
+                if (args.detail.queryText === "") {
+                    // Navigate to your landing page since the user is pre-scoping to your app.
+                } else {
+                    // Display results in UI for eventObject.detail.queryText and eventObject.detail.language.
+                    // eventObject.detail.language represents user's locale.
+                }
+
+                // Navigate to the first scenario since it handles search activation.
+                return WinJS.Navigation.navigate("/pages/home/home.html", { searchDetails: args.detail });
+            }));
         }
-    });
+    }, false);
+
+    /*Windows.ApplicationModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (eventObject) {
+        WinJS.log && WinJS.log("User submitted the search query: " + eventObject.queryText, "sample", "status");
+        console.log("test1");
+};*/
 
     app.onready = function (arg) {
 

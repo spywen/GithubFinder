@@ -4,7 +4,7 @@
     var ui = WinJS.UI;
 
     /**
-    Home namespace
+        Home namespace
     **/
     WinJS.Namespace.define("HomeNS", {
         //Repositories found list
@@ -14,7 +14,7 @@
     });
 
     /**
-    When search for something...
+        When search for something...
     **/
     function querySubmittedHandler(args) {
         //Reset list view 
@@ -35,7 +35,7 @@
     }
 
     /**
-    Reset list view
+        Reset list view
     **/
     function resetListView() {
         var listView = document.getElementById("repositoriesListView").winControl;
@@ -43,7 +43,7 @@
     }
 
     /**
-    Toast number of results found
+        Toast number of results found
     **/
     function toastNumberOfResult(count){
         var template = Windows.UI.Notifications.ToastTemplateType.toastImageAndText02;
@@ -68,9 +68,9 @@
     }
 
     /**
-    Manage loader
-    shouldStart <=> true : loader should be visible
-    else shoul be hidden
+        Manage loader
+        shouldStart <=> true : loader should be visible
+        else shoul be hidden
     **/
     function startOrStopLoader(shouldStart) {
         var GfLoader = document.querySelector(".win-ring");
@@ -93,7 +93,8 @@
         /**
         Page ready method
         **/
-        ready: function (element, options) { },
+        ready: function (element, options) {
+        },
 
         /**
         Invoke particular item to see details

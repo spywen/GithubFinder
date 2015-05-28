@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
-    <title>homePage</title>
+    <title>GithubFinder</title>
 
     <!-- Références WinJS -->
     <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
@@ -18,11 +18,11 @@
 <body>
     <!-- Repository Template -->
     <div class="repositorytemplate" data-win-control="WinJS.Binding.Template">
-        <div class="item">
-            <img class="item-image" src="#" data-win-bind="src: owner.avatar_url; alt: owner.login" />
-            <div class="item-overlay">
-                <h4 class="item-title" data-win-bind="textContent: full_name"></h4>
-                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: description"></h6>
+        <div class="repo">
+            <img class="repo-image" src="#" data-win-bind="src: owner.avatar_url; alt: owner.login" />
+            <div class="repo-overlay">
+                <h4 class="repo-title win-type-ellipsis" data-win-bind="textContent: full_name"></h4>
+                <h6 class="repo-subtitle win-type-ellipsis" data-win-bind="textContent: description"></h6>
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
         <header aria-label="Header content" role="banner">
             <button data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to GithubFinder !</span>
+                <span class="pagetitle">GithubFinder</span>
             	<progress class="win-ring win-medium"></progress>
             </h1>
             <div class="searchBox"
@@ -45,7 +45,7 @@
 			</div>
         </header>
         <section aria-label="Main content" role="main">
-            <div class="itemslist win-selectionstylefilled" id="repositoriesListView" aria-label="List of repository found" data-win-control="WinJS.UI.ListView" data-win-options="{
+            <div class="reposlist win-selectionstylefilled" id="repositoriesListView" aria-label="List of repository found" data-win-control="WinJS.UI.ListView" data-win-options="{
                 selectionMode: 'none',
                 currentItem: {type: WinJS.UI.ObjectType.item, index: 0, hasFocus: true},
                 itemDataSource: HomeNS.repositories.dataSource,

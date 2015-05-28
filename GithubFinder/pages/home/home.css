@@ -1,4 +1,5 @@
-﻿body {
+﻿/*Global*/
+body {
     background-image: url('/images/background.png');
     background-repeat: no-repeat;
     background-size:cover;
@@ -7,70 +8,62 @@
 	color:white !important;
     visibility:hidden;
 }
+@media all and (orientation: portrait) {
+    .searchBox{
+        width:70%;
+    }
+}
 .searchBox {
     -ms-grid-column: 4;
     margin-top: 57px;
     margin-right: 29px;
 }
+/*Global*/
 
-.homepage section[role=main] {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-}
-.homepage section[role=main] .search {
-    text-align:right;
-    margin-right: 200px;
-}
-
-.homepage .itemslist .win-horizontal.win-viewport .win-surface {
+/*Repository list*/
+.homepage .reposlist .win-horizontal.win-viewport .win-surface {
     margin-bottom: 60px;
     margin-left: 115px;
     margin-right: 115px;
-    margin-top: 135px;
+    margin-top: 100px;
 }
 
-.homepage .itemslist {
+.homepage .reposlist {
     height: 100%;
     position: relative;
     width: 100%;
     z-index: 0;
 }
+/*Repository list*/
 
-    .homepage .itemslist .item {
-        -ms-grid-columns: 1fr;
-        -ms-grid-rows: 1fr 90px;
-        display: -ms-grid;
-        height: 250px;
-        width: 250px;
-    }
-
-        .homepage .itemslist .item .item-image {
-            -ms-grid-row-span: 2;
-        }
-
-        .homepage .itemslist .item .item-overlay {
-            -ms-grid-row: 2;
-            -ms-grid-rows: 1fr 21px;
-            background: rgba(0, 0, 0, 0.65);
-            display: -ms-grid;
-            padding: 6px 15px 2px 15px;
-        }
-
-            .homepage .itemslist .item .item-overlay .item-title {
-                -ms-grid-row: 1;
-                color: rgba(255,255,255,0.87);
-                overflow: hidden;
-                width: 220px;
-            }
-
-            .homepage .itemslist .item .item-overlay .item-subtitle {
-                -ms-grid-row: 2;
-                color: rgba(255,255,255,0.6);
-                width: 220px;
-            }
-
-@media screen and (-ms-high-contrast) {
-    .homepage .itemslist .item .item-overlay {
-        color: WindowText;
-    }
+/*Repository*/
+.homepage .reposlist .repo {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 55px;
+    display: -ms-grid;
+    height: 200px;
+    width: 200px;
+    cursor:pointer;
 }
+.homepage .reposlist .repo .repo-image {
+    -ms-grid-row-span: 2;
+}
+.homepage .reposlist .repo .repo-overlay {
+    -ms-grid-row: 2;
+    -ms-grid-rows: 1fr 21px;
+    background: rgba(0, 0, 0, 0.65);
+    display: -ms-grid;
+    padding: 6px 15px 2px 15px;
+}
+.homepage .reposlist .repo .repo-overlay .repo-title {
+    -ms-grid-row: 1;
+    color: rgba(255,255,255,0.87);
+    overflow: hidden;
+    width: 220px;
+}
+.homepage .reposlist .repo .repo-overlay .repo-subtitle {
+    -ms-grid-row: 2;
+    color: rgba(255,255,255,0.6);
+    width: 220px;
+}
+/*Repository*/

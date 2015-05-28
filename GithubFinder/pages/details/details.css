@@ -1,23 +1,34 @@
-﻿.details {
+﻿/*Global*/
+.details {
 	width:auto;
 	margin-right: 50px;
 	margin-left:120px;
 	overflow-y:auto;
 	overflow-x:hidden;
 }
-
-.details section.grid{
-    display: -ms-grid;
-    margin-top: auto;
-    margin-bottom: auto;
-    -ms-grid-columns:35% 65%;
+.details .article-content{
+    color: #333;
 }
-.details .section{
-    margin:15px;
+/*Global*/
+
+/*Sections*/
+.details .section {
     padding:0px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 3px;
+}
+@media all and (orientation: landscape) {
+    .details .section{
+        margin:15px;
+    }
+}
+
+@media all and (orientation: portrait) {
+    .details .section{
+        margin-bottom:15px;
+        width:95%;
+    }
 }
 
 .details section .header{
@@ -44,38 +55,83 @@
     word-wrap: break-word;
 }
 
-.details section .owner{
-    -ms-grid-column: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
+.details section article .title{
+	float:left;
 }
+.details section article .findOnGithub{
+	float:right;
+}
+.details section article .findOnGithub a{
+	float:right;
+	cursor:pointer;
+}
+/*Sections*/
 
+/*Section specific*/
 .details section .owner img{
-    width:60%;
+    width:35%;
+	float:left;
+	margin-right:20px;
+	margin-bottom:20px;
 }
-.imgContainer {
+.details section .owner .imgContainer {
 	width:100%;
 	margin:auto;
 	text-align:center;
 }
-
-.details section .repo{
-    -ms-grid-column: 1;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
+.details section .search .article-content{
+    overflow-y:auto;
 }
+/*Section specific*/
 
-.details section .search{
-    -ms-grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-	width:95%;
+/*Grid*/
+@media all and (orientation: landscape) {
+    .details section.grid{
+        display: -ms-grid;
+        margin-top: auto;
+        margin-bottom: auto;
+        -ms-grid-columns:55% 45%;
+    }
+    .details section .owner{
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+    }
+    .details section .repo{
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        width:88%;
+    }
+    .details section .search{
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+	    -ms-grid-column-span: 2;
+	    width:95%;
+	    height:auto;
+    }
 }
-
-.details .article-content{
-    color: #333;
+@media all and (orientation: portrait) {
+    .details section.grid{
+        display: -ms-grid;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .details section .owner{
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+    }
+    .details section .repo{
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+    .details section .search{
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+	    height:auto;
+    }
 }
+/*Grid*/
 
+/*Fragments template*/
 .fragmentItem{
     padding:0px;
     background-color: #fff;
@@ -94,17 +150,11 @@
     height:30px;
     vertical-align:middle;
 }
-    .fragmentItem .header .property {
-        font-weight:bold;
-    }
-.fragmentItem .content{
-    margin:15px;
-}
-.fragmentItem .content .extract{
+.fragmentItem .header .property {
     font-weight:bold;
 }
-.fragmentItem .content .openFragment{
-	width:500px;
+.fragmentItem .content{
+    margin:15px;
 }
 .fragmentItem .content pre{
     padding: 16px;
@@ -114,21 +164,13 @@
   background-color: #f7f7f7;
   border-radius: 3px;
 }
+/*Fragments template*/
 
-/*Ovverides*/
-.win-itembox{
-    background-color:#fff !important;
+/*Overides*/
+.win-listview {
+    height:auto;
 }
-button.black{
-    background-color: transparent;
-    border-color: #333;
-    color: #333;
+.win-listview .win-itembox, .win-itemcontainer .win-itembox {
+    background-color: #fff;
 }
-button.black{
-    background-color: transparent;
-    border-color: #333;
-    color: #333;
-}
-button.black:hover{
-    background-color: #f7f7f7;
-}
+/*Overides*/

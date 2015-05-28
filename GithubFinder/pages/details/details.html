@@ -3,13 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
-    <title>details</title>
+    <title>Repository Details</title>
 
     <link href="details.css" rel="stylesheet" />
     <script src="/js/GithubApiService.js"></script>
     <script src="details.js"></script>
-
-	<link href="../../css/Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -17,10 +15,9 @@
     <div class="fragmenttemplate" data-win-control="WinJS.Binding.Template">
         <div class="fragmentItem">
             <div class="header">
-                <span class="win-type-small">Property which contains keyword(s):</span> <span class="property" data-win-bind="textContent: property"></span>
+                <span class="win-type-small"><strong>Extract:</strong> (Property which contains keyword(s):</span> <span class="property" data-win-bind="textContent: property"></span>)
 			</div>
             <div class="content">
-				<span class="extract">Extract:</span>
 				<pre class="item-subtitle" data-win-bind="textContent:fragment"></pre>
             </div>
         </div>
@@ -40,7 +37,12 @@
             <div class="owner section" aria-atomic="true" aria-label="Owner details" aria-live="assertive">
                 <article>
                     <header class="header">
-                        Owner
+                        <div class="title win-type-ellipsis">
+                            Owner
+                        </div>
+						<div class="findOnGithub">
+							<a data-win-bind="href: repo.owner.html_url">Find on Github &#xe128</a>
+						</div>
                     </header>
                     <div class="article-content">
 						<div class="imgContainer">
@@ -66,9 +68,6 @@
                             </div>
                         </div>
                     </div>
-                    <footer>
-                        <a class="findOnGithub" data-win-bind="href: repo.owner.html_url">Find on Github &#xe128</a>
-                    </footer>
                 </article>
             </div>
 
@@ -76,11 +75,16 @@
             <div class="repo section" aria-atomic="true" aria-label="Repository details" aria-live="assertive">
                 <article>
                     <header class="header">
-                        Repository
+                        <div class="title">
+                            Repository
+                        </div>
+                        <div class="findOnGithub">
+                            <a class="findOnGithub" data-win-bind="href: repo.html_url">Find on Github &#xe128</a>
+                        </div>
                     </header>
                     <div class="article-content">
                         <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: repo.name"></h2>
-                        <h4 class="article-subtitle" data-win-bind="textContent: repo.full_name"></h4>
+                        <h4 class="article-subtitle win-type-ellipsis" data-win-bind="textContent: repo.full_name"></h4>
                         <p data-win-bind="innerText: repo.description"></p>
                         <div>
                             <span class="win-type-interactive">Watcher(s): </span>
@@ -99,9 +103,6 @@
                             <span class="win-type-large" data-win-bind="textContent: repoDetails.created_at DetailsNS.convertDate"></span>
                         </div>
                     </div>
-                    <footer>
-                        <a class="findOnGithub" data-win-bind="href: repo.html_url">Find on Github &#xe128</a>
-                    </footer>
                 </article>
             </div>
 
