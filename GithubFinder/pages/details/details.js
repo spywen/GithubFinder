@@ -4,7 +4,7 @@
     "use strict";
 
     /**
-    Details namespace
+        Details namespace
     **/
     WinJS.Namespace.define("DetailsNS", {
         //repo default data
@@ -29,8 +29,7 @@
 
         init: function(element, options){
             DetailsNS.repoSelected = GithubApiService.getRepoById(options.repoId);
-            
-            //get owner details
+            //get details
             return this.loadDetails();
         },
 
@@ -54,7 +53,7 @@
         },
         
         /**
-        Ready method
+            Ready method
         **/
         ready: function (element, options) {
 
@@ -98,9 +97,5 @@
         request.data.properties.title = "GithubFinder - Share repository - " + DetailsNS.repoSelected.name;
         request.data.properties.description = "Someone wants to share to you a Github repository found with GithubFinder.";
         request.data.setWebLink(new Windows.Foundation.Uri(DetailsNS.repoSelected.html_url));  
-    }
-
-    function raiseError() {
-
     }
 })();

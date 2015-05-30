@@ -6,7 +6,6 @@
     <meta name="ms-design-extensionType" content="Search" />
     <title>Search result page</title>
 
-    <!-- Références WinJS -->
     <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
@@ -39,15 +38,7 @@
             </div>
         </header>
         <section aria-label="Main content" role="main">
-            <div class="resultsmessage win-type-x-large">No repository found.</div>
-            <!--
-            <div class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView" data-win-options="{
-                    selectionMode: 'none',
-                    itemTemplate: select('.itemtemplate'),
-                    oniteminvoked: select('.pagecontrol').winControl.itemInvoked
-                }">
-            </div>
-                -->
+            <div class="resultsmessage win-type-x-large">No repositories found.</div>
             <div class="reposlist win-selectionstylefilled" id="repositoriesListView" aria-label="List of repository found" data-win-control="WinJS.UI.ListView" data-win-options="{
                 selectionMode: 'none',
                 currentItem: {type: WinJS.UI.ObjectType.item, index: 0, hasFocus: true},

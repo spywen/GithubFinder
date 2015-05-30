@@ -13,9 +13,6 @@
     <!-- Références GithubFinder -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
-
-    <script src="/pages/results/searchResults.js"></script>
-
     <script src="/js/navigator.js"></script>
     
 </head>
@@ -26,7 +23,10 @@
     <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdInfo',label:'App info',icon:'pin',tooltip:'App info',section:'primary',onclick:AppBar.appBarCommand}"></button>
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdHelp',label:'Help',icon:'help',tooltip:'Help',section:'primary',onclick:AppBar.appBarCommand}"></button>
-		<hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
+        <hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdSearch',label:'Search',icon:'find',tooltip:'Search',section:'primary',onclick:AppBar.appBarCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdShare',label:'Share',icon:'mail',tooltip:'Share',section:'primary',onclick:AppBar.appBarCommand}"></button>
+        <hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdExit',label:'Exit',icon:'closepane',tooltip:'Exit',section:'primary',onclick:AppBar.appBarCommand}"></button>
     </div>
 
@@ -36,7 +36,7 @@
                 This application is dedicated to the amazing Github service which exists since 2008. More and more developers and common people use this web service to share their projects and consequently their knowledge.
                 GithubFinder application have been designed and created to be able to simply search and find what you want on this code encyclopaedia from a Windows device.
             </p>
-            <p>Thanks to the fabulous Github API ;)</p>
+            <p>Thanks to the Github API ;)</p>
             <p><strong>Designed and created by Babin Laurent for school project at Supinfo Nice 2015 (4NET)</strong></p>
         </div>
     </div>
@@ -50,7 +50,8 @@
                     <li>A details page: for a particular repository, which gathering all the more important information concerning this one (Owner data, repository data, search fragments found)</li>
                 </ul>
             </p>
-            <p>The details page contains as well many links which will redirect you on the Github web site directly.</p>
+            <p>The details page contains as well many links which will redirect you on the Github web site.</p>
+            <p>Thanks to the application bar you will be able anytime, anywhere, to search for a new repository or share it!</p>
         </div>
     </div>
 

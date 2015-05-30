@@ -8,6 +8,7 @@
     var nav = WinJS.Navigation;
     var sched = WinJS.Utilities.Scheduler;
     var ui = WinJS.UI;
+    var appModel = Windows.ApplicationModel;
 
     /**
     App bar namespace
@@ -27,6 +28,10 @@
                     document.getElementById("helpFlyout").winControl.show(command);
                 } else if (label === 'App info') {
                     document.getElementById("appInfoFlyout").winControl.show(command);
+                } else if (label === 'Share') {
+                    Windows.ApplicationModel.DataTransfer.DataTransferManager.showShareUI();
+                } else if (label === 'Search') {
+                    Windows.ApplicationModel.Search.SearchPane.getForCurrentView().show();
                 }
             }
         }),
@@ -55,6 +60,13 @@
             //document.getElementById("appBar").winControl.show();
 
             args.setPromise(p);
+        } else if (args.detail.kind === appModel.Activation.ActivationKind.search) {
+            args.setPromise(ui.processAll().then(function () {
+                if (!nav.location) {
+                    nav.history.current = { location: Application.navigator.home, initialState: {} };
+                }
+                return nav.navigate(searchPageURI, { queryText: args.detail.queryText });
+            }));
         }
     }, false);
 
@@ -66,5 +78,12 @@
         app.sessionState.history = nav.history;
     };
 
+
+    /**
+        Search contract implementation
+    **/
+    appModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (args) { nav.navigate("/pages/results/searchResults.html", args); };
+
     app.start();
+    
 })();

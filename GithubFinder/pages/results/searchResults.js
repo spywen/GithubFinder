@@ -63,8 +63,6 @@
             document.querySelector(".titlearea .pagesubtitle").innerHTML = "Results for " + modernQuotationMark + toStaticHTML(this.lastSearch) + modernQuotationMark;
         },
 
-
-
         /**
             Ready method
         **/
@@ -108,22 +106,6 @@
             WinJS.Navigation.navigate("/pages/details/details.html", arg);
         }
     });
-
-    /*Search contract implementation*/
-    WinJS.Application.addEventListener("activated", function (args) {
-        if (args.detail.kind === appModel.Activation.ActivationKind.search) {
-            args.setPromise(ui.processAll().then(function () {
-                if (!nav.location) {
-                    nav.history.current = { location: Application.navigator.home, initialState: {} };
-                }
-
-                return nav.navigate(searchPageURI, { queryText: args.detail.queryText });
-            }));
-        }
-    });
-
-    appModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (args) { nav.navigate(searchPageURI, args); };
-    /*Search contract implementation*/
 
     /**
      Toast number of results found
