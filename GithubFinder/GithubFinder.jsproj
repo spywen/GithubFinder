@@ -61,6 +61,9 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid2x2.css" />
+    <Content Include="pages\results\searchResults.css" />
+    <Content Include="pages\results\searchResults.html" />
+    <Content Include="pages\results\searchResults.js" />
     <None Include="GithubFinder_StoreKey.pfx" />
     <Content Include="images\background.png" />
     <Content Include="images\found.png" />

@@ -32,6 +32,9 @@
         </m2:InitialRotationPreference>
         <m2:ApplicationView MinWidth="default" />
       </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>

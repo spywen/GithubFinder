@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="Search" />
+    <title>Search result page</title>
+
+    <!-- Références WinJS -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/results/searchResults.css" rel="stylesheet" />
+    <script src="/js/GithubApiService.js"></script>
+    <script src="/pages/results/searchResults.js"></script>
+</head>
+<body>
+    <!-- Repository template -->
+    <div class="repositorytemplate" data-win-control="WinJS.Binding.Template">
+        <div class="repo">
+            <img class="repo-image" src="#" data-win-bind="src: owner.avatar_url; alt: owner.login" />
+            <div class="repo-overlay">
+                <h4 class="repo-title win-type-ellipsis" data-win-bind="textContent: full_name"></h4>
+                <h6 class="repo-subtitle win-type-ellipsis" data-win-bind="textContent: description"></h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="searchResults fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <div class="titlearea">
+                <h1 class="pagetitle win-type-ellipsis"></h1>
+                <h2 class="pagesubtitle win-type-ellipsis"></h2>
+                <progress class="win-ring win-large"></progress>
+            </div>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="resultsmessage win-type-x-large">No repository found.</div>
+            <!--
+            <div class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView" data-win-options="{
+                    selectionMode: 'none',
+                    itemTemplate: select('.itemtemplate'),
+                    oniteminvoked: select('.pagecontrol').winControl.itemInvoked
+                }">
+            </div>
+                -->
+            <div class="reposlist win-selectionstylefilled" id="repositoriesListView" aria-label="List of repository found" data-win-control="WinJS.UI.ListView" data-win-options="{
+                selectionMode: 'none',
+                currentItem: {type: WinJS.UI.ObjectType.item, index: 0, hasFocus: true},
+                itemTemplate: select('.repositorytemplate'),
+                oniteminvoked: select('.pagecontrol').winControl.itemInvoked
+            }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

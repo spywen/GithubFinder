@@ -1,0 +1,75 @@
+﻿/*Loader*/
+.win-ring{
+	color:white !important;
+    visibility:hidden;
+}
+/*Loader*/
+
+/*Header*/
+.searchResults header[role=banner] .titlearea {
+    -ms-grid-columns: auto 20px 1fr 20px;
+    display: -ms-grid;
+}
+
+.searchResults header[role=banner] .titlearea .pagetitle {
+    width: auto;
+}
+
+.searchResults header[role=banner] .titlearea .pagesubtitle {
+    -ms-grid-column: 3;
+    margin-top: 32px;
+}
+.searchResults section[role=main] .resultsmessage {
+    margin-left: 250px;
+    visibility:hidden;
+}
+/*Header*/
+
+/*Repository list*/
+.searchResults .reposlist .win-horizontal.win-viewport .win-surface {
+    margin-bottom: 60px;
+    margin-left: 115px;
+    margin-right: 115px;
+    margin-top: 100px;
+}
+
+.searchResults .reposlist {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+/*Repository list*/
+
+/*Repository*/
+.searchResults .reposlist .repo {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 55px;
+    display: -ms-grid;
+    height: 200px;
+    width: 200px;
+    cursor:pointer;
+}
+.searchResults .reposlist .repo .repo-image {
+    -ms-grid-row-span: 2;
+}
+.searchResults .reposlist .repo .repo-overlay {
+    -ms-grid-row: 2;
+    -ms-grid-rows: 1fr 21px;
+    background: rgba(0, 0, 0, 0.65);
+    display: -ms-grid;
+    padding: 6px 15px 2px 15px;
+}
+.searchResults .reposlist .repo .repo-overlay .repo-title {
+    -ms-grid-row: 1;
+    color: rgba(255,255,255,0.87);
+    overflow: hidden;
+    width: 220px;
+}
+.searchResults .reposlist .repo .repo-overlay .repo-subtitle {
+    -ms-grid-row: 2;
+    color: rgba(255,255,255,0.6);
+    width: 220px;
+}
+/*Repository*/
+

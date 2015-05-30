@@ -2,24 +2,28 @@
     "use strict";
 
     /**
-    Github API service namespace
+        Github API service namespace
     **/
     WinJS.Namespace.define("GithubApiService", {
-        items: new WinJS.Binding.List(),
+        repositories: new WinJS.Binding.List(),
         search: search,
         getRepoById: getRepoById,
+        getRepoByIndex: getRepoByIndex,
         findRepository: findRepository,
         findUser: findUser
     });
 
     /**
-    Search repository
+        Search repository
     **/
     function search(keywords) {
-        this.items = new WinJS.Binding.List();
+        this.repositories = new WinJS.Binding.List();
+        //By default request for repository info (title, description, ...)
+        var apiUrlToRequest = 'https://api.github.com/search/repositories?q=';
+
         return new WinJS.Promise(function (complete, error) {
             WinJS.xhr({
-                url: 'https://api.github.com/search/repositories?q=' + keywords + '&page=1&per_page=200',
+                url: apiUrlToRequest + keywords + '&page=1&per_page=200',
                 type: 'GET',
                 headers: { 'Accept': 'application/vnd.github.v3.text-match+json' }
             }).done(
@@ -28,11 +32,11 @@
                         var feed = JSON.parse(result.responseText);
                         for (var i = 0, len = feed.items.length; i < len; i++) {
                             var item = feed.items[i];
-                            GithubApiService.items.push(item);
+                            GithubApiService.repositories.push(item);
                         }
                         complete({
                             count: feed.total_count,
-                            items: GithubApiService.items
+                            repositories: GithubApiService.repositories
                         });
                     } else {
                         error("Githup api not available");
@@ -46,11 +50,11 @@
     }
 
     /**
-    Find repo by id
+        Find repo by id
     **/
     function getRepoById(id) {
-        for (var i = 0; i < GithubApiService.items.length; i++) {
-            var item = GithubApiService.items.getAt(i);
+        for (var i = 0; i < GithubApiService.repositories.length; i++) {
+            var item = GithubApiService.repositories.getAt(i);
             if (item.id === id) {
                 return item;
             }
@@ -58,7 +62,14 @@
     }
 
     /**
-    Find additionnal repository data
+        Find repo by index
+    **/
+    function getRepoByIndex(index) {
+        return GithubApiService.repositories.getAt(index);
+    }
+
+    /**
+        Find additionnal repository data
     **/
     function findRepository(id) {
         return new WinJS.Promise(function (complete, error) {
@@ -82,7 +93,7 @@
     }
 
     /**
-    Find additionnal owner data
+        Find additionnal owner data
     **/
     function findUser(userName) {
         return new WinJS.Promise(function (complete, error) {
