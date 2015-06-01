@@ -1,13 +1,17 @@
 ﻿/*Search bar*/
 @media all and (orientation: portrait) {
-    .homepage .searchForm{
+    .homepage #searchInput {
+        width:60%;
     }
 }
+@media all and (orientation: landscape) {
+    .homepage #searchInput {
+        width:40%;
+    }
+}
+
 .homepage .searchForm {
     margin-top: 200px;
     text-align:center;
-}
-.homepage #searchInput {
-    width:40%;
 }
 /*Search bar*/
